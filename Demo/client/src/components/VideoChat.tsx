@@ -12,6 +12,8 @@ function VideoChat() {
   const peerConnection = useRef<RTCPeerConnection | null>(null);
   const [userRole, setUserRole] = useState<"A" | "B" | null>(null);
 
+  console.log(import.meta.env.VITE_SOCKET_SERVER, "test env")
+
   const servers = {
     iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
   };
