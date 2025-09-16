@@ -33,10 +33,10 @@ io.on("connection", (socket) => {
   });
 });
 
-const host= '192.168.1.72'
+const PORT = process.env.PORT || 5174;
 
-server.listen(5174,host, () => {
-  console.log("Server listening on http://localhost:5174",host);
+server.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });
 
 

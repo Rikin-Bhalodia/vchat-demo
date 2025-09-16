@@ -1,7 +1,8 @@
 import { useRef, useEffect, useState } from "react";
 import io from "socket.io-client";
 
-const socket = io("http://localhost:5174");
+// const socket = io("http://192.168.1.72:5174/");
+const socket = io(import.meta.env.VITE_SOCKET_SERVER as string);
 
 function VideoChat() {
   const localVideoRef = useRef<HTMLVideoElement>(null);
