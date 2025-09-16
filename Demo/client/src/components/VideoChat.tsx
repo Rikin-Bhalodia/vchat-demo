@@ -4,6 +4,8 @@ import io from "socket.io-client";
 // const socket = io("http://192.168.1.72:5174/");
 const socket = io(import.meta.env.VITE_SOCKET_SERVER as string);
 
+console.log(import.meta.env.VITE_SOCKET_SERVER)
+
 function VideoChat() {
   const localVideoRef = useRef<HTMLVideoElement>(null);
   const remoteVideoRef = useRef<HTMLVideoElement>(null);
